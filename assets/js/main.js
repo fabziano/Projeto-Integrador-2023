@@ -17,3 +17,14 @@ function toggleAside() {
         aside.classList.add('mostrar');
     }
 }
+
+function captureScreen() {
+    const mainElement = document.querySelector('main');
+    html2canvas(mainElement).then(function(canvas) {
+        const screenshotUrl = canvas.toDataURL('image/png');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = screenshotUrl;
+        downloadLink.download = 'historico.png'; 
+        downloadLink.click();
+    });
+}
