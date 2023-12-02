@@ -139,6 +139,7 @@ td:nth-child(5) button:hover {
 }
 td:nth-child(5) .editar-btn {
     background-color: var(--amarelo);
+    color:#111;
 }
 .logo-equipe {
     width: 100%;
