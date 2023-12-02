@@ -65,8 +65,7 @@ aside {
     background-color: #f4b223;
     border-radius: 0.2em;
     border: none;
-    padding: 0.2em;
-    font-size: 1.1em;
+    padding: 0.5em;
     transition: transform ease-in-out 250ms;
 }
 .adicionar-btn:hover{
