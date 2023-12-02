@@ -477,6 +477,7 @@ function carregarElementosChaves(duplaDiv,chave){
                 }else if (chave.vencedor == chave.equipe2){
                     equipe1Imagem.style.filter = "grayscale(100%)"
                     equipe1Botao.style.opacity = '0'
+                    equipe1Botao.style.cursor = 'default';
                     equipe1MainContainer.style.backgroundColor = '#24272a';
 
                     equipe2Botao.classList = 'bi bi-arrow-right-circle-fill'
