@@ -266,6 +266,7 @@ function criarBotaoDesfazerHandler(chave) {
             }
 
                 carregarChaves();
+                carregarChavesRepescagem();
         } else {
             alert("Não é possível retroceder essa equipe na atual chave");
         }
@@ -292,7 +293,6 @@ function criarChavesRepescagem(){
             }
         }
         equipesTemp = [...equipesRepescagem];
-        console.log(rodadas[0])
     }else{
         for(let r=0; r<rodadasRepescagem.length; r++){
             rodadasRepescagem[r].winners = [];
@@ -377,17 +377,22 @@ function carregarChavesRepescagem(){
 function avancarChaves(){
     if(rodadas.length>0){
         if(rodadas.length == 1){
+            if(!rodadas[rodadas.length - 1].chaves.every(chaves => chaves.vencedor )){
+                alert("Não é possivel avançar as chaves antes que todas tenham um vencedor definido");
+                return;
+            }
             if(rodadasRepescagem.length>0){
                 if(rodadasRepescagem[rodadasRepescagem.length-1].chaves[0].equipe2 == undefined){
                     criarChaves();
-                }else{
+                }else if( rodadasRepescagem[rodadasRepescagem.length - 1].chaves.every(chaves => chaves.vencedor )){
                     criarChavesRepescagem();
                     if(rodadasRepescagem[rodadasRepescagem.length-1].chaves[0].equipe2 == undefined)
                         criarChaves();
-                }
+                }else
+                    alert("Não é possivel avançar a repescagem antes que todas as equipes tenham um vencedor definido")
             }else
                 criarChavesRepescagem();   
-        }else if(rodadas[rodadas.length - 1].chaves.every(chaves => chaves.vencedor)){
+        }else if(rodadas[rodadas.length - 1].chaves.every(chaves => chaves.vencedor )){
             criarChaves();
         }else
             alert("Não é possivel avançar as chaves antes que todas tenham um vencedor definido")
