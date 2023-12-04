@@ -17,6 +17,7 @@ aside {
     min-width: 275px;
     max-width: 275px;
     padding: 0.5em;
+    height:fit-content;
     color: #fff;
     background-color: #24272a;
     transition: all 0.3s ease; /* Adicionando uma transição suave */
