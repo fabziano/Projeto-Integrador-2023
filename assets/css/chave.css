@@ -150,7 +150,7 @@ nav button:hover{
 section {
     flex: 1;
     margin-left: 300px;
-    max-width: 80%;
+    min-width: 80%;
 }
 #chave, #repescagem{
     display: flex;
