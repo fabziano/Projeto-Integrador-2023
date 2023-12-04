@@ -17,10 +17,8 @@ aside {
     min-width: 275px;
     max-width: 275px;
     padding: 0.5em;
-    height:fit-content;
     color: #fff;
     background-color: #24272a;
-    transition: all 0.3s ease; /* Adicionando uma transição suave */
 }
 
 aside {
@@ -30,7 +28,7 @@ aside {
     position: absolute;
     left: 0; 
     margin-left: 0.7em;
-    height: 100%;
+    height:fit-content;
     transition: left 0.3s ease-in-out; /* Transição suave */
 }
 #toggle-aside-btn {
