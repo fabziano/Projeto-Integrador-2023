@@ -27,16 +27,18 @@ aside {
     background-color: #24272a;
     position: absolute;
     left: 0; 
-    margin-left: 0.7em;
     height:fit-content;
     transition: left 0.3s ease-in-out; /* Transição suave */
 }
 #toggle-aside-btn {
+    z-index: 1001;
     border:none;
-    position: fixed;
+    border-bottom: 0 0.5em 0 0.5em;
+    position: absolute;
+    color:#fff;
     background-color: #24272a;
     cursor: pointer;
-    height: 100%;
+    height:min-content;
 }
 
 .mostrar {
@@ -74,6 +76,7 @@ aside {
 }
 #nome{
     width: 85%;
+    margin-left: 0.5em;
     border-radius: 0.2em;
     outline: none;
     border: none;
