@@ -28,6 +28,7 @@ aside {
     position: absolute;
     left: 0; 
     height:fit-content;
+    border-radius: 0 0 0.3em;
     transition: left 0.3s ease-in-out; /* Transição suave */
 }
 #toggle-aside-btn {
